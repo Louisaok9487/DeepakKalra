@@ -15,19 +15,19 @@
         .font-inter {
             font-family: 'Inter', sans-serif;
         }
-        /* Smooth scrolling behavior */
+        /* Smooth scrolling behaviour */
         html {
-            scroll-behavior: smooth;
+            scroll-behaviour: smooth;
         }
         /* Simple transition for nav links */
         .nav-link {
-            transition: color 0.3s ease, border-color 0.3s ease;
+            transition: colour 0.3s ease, border-colour 0.3s ease;
         }
         /* Hero section background image */
         .hero-bg {
             background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1887&auto=format&fit=crop');
             background-size: cover;
-            background-position: center;
+            background-position: centre;
             background-attachment: fixed;
         }
         /* Add a subtle overlay to the hero image for better text readability */
@@ -38,7 +38,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-colour: rgba(0, 0, 0, 0.6);
             z-index: 1;
         }
         /* Ensure content is above the overlay */
@@ -65,6 +65,43 @@
             overflow: hidden;
             transition: max-height 0.5s ease-out, padding 0.5s ease-out;
         }
+
+        /* Removed: Carousel specific styles */
+        /* Removed: Call to Action Button Animations */
+        /* NEW: Enhanced Hover Effects for Cards */
+        .card-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2); /* Amber glow */
+        }
+
+        /* NEW: Enhanced Hover Effects for Gallery Images */
+        .gallery-image-hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-image-hover-effect:hover {
+            transform: scale(1.07) rotate(1deg); /* Slightly more pronounced scale and subtle rotation */
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); /* Amber glow */
+        }
+
+        /* NEW: Input Field Animations */
+        .form-input-animated {
+            transition: border-colour 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input-animated:focus {
+            border-colour: #fbbf24; /* Amber-400 */
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5); /* Amber glow */
+        }
+
+        /* NEW: Subtle Background Gradients */
+        .bg-gradient-subtle {
+            background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(0, 0, 0, 0.9)); /* Darker grey to black */
+        }
+        .bg-gradient-subtle-alt {
+            background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(17, 24, 39, 0.9)); /* Black to darker grey */
+        }
     </style>
 </head>
 <body class="bg-black text-white font-inter">
@@ -74,7 +111,7 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="text-2xl font-bold uppercase tracking-wider font-anton">
-                    <a href="#home" class="hover:text-amber-400 transition-colors">Deepak Kalra</a>
+                    <a href="#home" class="hover:text-amber-400 transition-colours">Deepak Kalra</a>
                 </div>
                 <!-- UPDATED Navigation -->
                 <nav class="hidden md:flex items-center space-x-6">
@@ -105,7 +142,7 @@
         </div>
     </header>
 
-    <!-- Home Section -->
+    <!-- Home Section - Restored to static image -->
     <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center relative">
         <div class="hero-overlay"></div>
         <div class="hero-content container mx-auto px-6">
@@ -113,7 +150,7 @@
                 Forge Your Strength
             </h1>
             <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                Unleash your potential. Personalized training programs designed for power, performance, and peak physical condition.
+                Unleash your potential. Personalised training programs designed for power, performance, and peak physical condition.
             </p>
             <a href="#contact" class="mt-8 inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
                 Start Your Transformation
@@ -122,7 +159,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 md:py-32 bg-gray-900">
+    <section id="about" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">About Me</h2>
@@ -138,18 +175,18 @@
                         As a dedicated personal trainer at CityFitness, my mission is to empower you to become the strongest version of yourself. My journey in fitness began with a simple belief: everyone holds the potential for greatness. It's not just about lifting weights; it's about building discipline, resilience, and a champion's mindset that extends beyond the gym.
                     </p>
                     <p class="text-lg text-gray-300">
-                        I specialize in creating bespoke training programs that focus on functional strength, hypertrophy, and sustainable results. Whether you're a beginner taking your first step or an experienced lifter aiming to break through a plateau, I provide the guidance, motivation, and expertise to help you conquer your goals. Let's build a stronger you, together.
+                        I specialise in creating bespoke training programs that focus on functional strength, hypertrophy, and sustainable results. Whether you're a beginner taking your first step or an experienced lifter aiming to break through a plateau, I provide the guidance, motivation, and expertise to help you conquer your goals. Let's build a stronger you, together.
                     </p>
                     <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center">
+                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
                             <div class="text-4xl font-bold text-amber-400">10+</div>
                             <div class="mt-2 text-gray-400">Years Experience</div>
                         </div>
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center">
+                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
                             <div class="text-4xl font-bold text-amber-400">500+</div>
                             <div class="mt-2 text-gray-400">Client Transformations</div>
                         </div>
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center">
+                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
                             <div class="text-4xl font-bold text-amber-400">5</div>
                             <div class="mt-2 text-gray-400">Certifications</div>
                         </div>
@@ -165,7 +202,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 md:py-32 bg-black">
+    <section id="services" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">My Programs</h2>
@@ -173,17 +210,17 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left">
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">1-on-1 Personal Training</h3>
-                    <p class="text-gray-300">Experience a fully personalized training program designed to maximize your results. We'll work together in person to perfect your form, push your limits, and ensure every workout is effective and motivating.</p>
+                    <p class="text-gray-300">Experience a fully personalised training program designed to maximise your results. We'll work together in person to perfect your form, push your limits, and ensure every workout is effective and motivating.</p>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left" style="transition-delay: 0.2s;">
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect" style="transition-delay: 0.2s;">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">Online Coaching</h3>
                     <p class="text-gray-300">Get expert guidance and accountability from anywhere in the world. My online coaching includes custom workout plans, video feedback on your lifts, and weekly check-ins to keep you on track.</p>
                 </div>
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left" style="transition-delay: 0.4s;">
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect" style="transition-delay: 0.4s;">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">Nutritional Guidance</h3>
-                    <p class="text-gray-300">Fuel your body for optimal performance and recovery. I'll help you build sustainable, healthy eating habits that complement your training and accelerate your progress—no restrictive diets, just smart choices.</p>
+                    <p class="text-300">Fuel your body for optimal performance and recovery. I'll help you build sustainable, healthy eating habits that complement your training and accelerate your progress—no restrictive diets, just smart choices.</p>
                 </div>
             </div>
             <!-- NEW Pricing Table -->
@@ -194,38 +231,38 @@
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
                     <!-- Pricing Tier 1 -->
-                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up">
+                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up card-hover-effect">
                         <h3 class="text-2xl font-bold text-center mb-2">Starter Pack</h3>
                         <p class="text-5xl font-anton text-center text-amber-400 mb-6">$XXX</p>
                         <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Personal Training Sessions</li>
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
                         </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colors">Get Started</a>
+                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colours">Get Started</a>
                     </div>
                     <!-- Pricing Tier 2 (Highlighted) -->
-                    <div class="bg-gray-800 p-8 rounded-lg border-2 border-amber-400 flex flex-col fade-in-up relative" style="transition-delay: 0.2s;">
+                    <div class="bg-gray-800 p-8 rounded-lg border-2 border-amber-400 flex flex-col fade-in-up relative card-hover-effect" style="transition-delay: 0.2s;">
                         <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-amber-400 text-black font-bold uppercase text-sm px-4 py-1 rounded-full">Most Popular</div>
                         <h3 class="text-2xl font-bold text-center mb-2">Transformation Pack</h3>
                         <p class="text-5xl font-anton text-center text-amber-400 mb-6">$YYY</p>
                         <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>12 Personal Training Sessions</li>
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalized Nutrition Plan</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalised Nutrition Plan</li>
                         </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-amber-500 transition-colors">Get Started</a>
+                        <a href="#contact" class="mt-auto w-full text-center bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-amber-500 transition-colours">Get Started</a>
                     </div>
                     <!-- Pricing Tier 3 -->
-                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up" style="transition-delay: 0.4s;">
+                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up card-hover-effect" style="transition-delay: 0.4s;">
                         <h3 class="text-2xl font-bold text-center mb-2">All-In Pack</h3>
                         <p class="text-5xl font-anton text-center text-amber-400 mb-6">$ZZZ</p>
                         <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 Personal Training Sessions</li>
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalized Nutrition Plan</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalised Nutrition Plan</li>
                             <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Weekly Check-in Calls</li>
                         </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colors">Get Started</a>
+                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colours">Get Started</a>
                     </div>
                 </div>
             </div>
@@ -233,7 +270,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 md:py-32 bg-gray-900">
+    <section id="gallery" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Gallery</h2>
@@ -241,12 +278,12 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <div class="fade-in-up"><img src="images/gallery-1.jpg.png" alt="Gallery image 1" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
-                <div class="fade-in-up"><img src="images/gallery-2.jpg.png" alt="Gallery image 2" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
-                <div class="fade-in-up"><img src="images/gallery-3.jpg.png" alt="Gallery image 3" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
-                <div class="fade-in-up"><img src="images/gallery-4.jpg.png" alt="Gallery image 4" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
-                <div class="fade-in-up"><img src="images/gallery-5.jpg.png" alt="Gallery image 5" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
-                <div class="fade-in-up"><img src="images/gallery-6.jpg.png" alt="Gallery image 6" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
+                <div class="fade-in-up"><img src="images/gallery-1.jpg.png" alt="Gallery image 1" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
+                <div class="fade-in-up"><img src="images/gallery-2.jpg.png" alt="Gallery image 2" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
+                <div class="fade-in-up"><img src="images/gallery-3.jpg.png" alt="Gallery image 3" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
+                <div class="fade-in-up"><img src="images/gallery-4.jpg.png" alt="Gallery image 4" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
+                <div class="fade-in-up"><img src="images/gallery-5.jpg.png" alt="Gallery image 5" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
+                <div class="fade-in-up"><img src="images/gallery-6.jpg.png" alt="Gallery image 6" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
             </div>
             <div class="mt-16 text-center">
                  <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
@@ -257,7 +294,7 @@
     </section>
 
     <!-- NEW Instagram Feed Section -->
-    <section id="instagram" class="py-20 md:py-32 bg-black">
+    <section id="instagram" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Follow My Journey</h2>
@@ -265,16 +302,18 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="fade-in-up">
-                <!-- IMPORTANT: To get your own Instagram feed widget, go to a free service like Lightwidget.com or Snapwidget.com -->
-                <!-- Create a free account, connect your Instagram, and they will give you an iframe code like this one. -->
-                <!-- Just replace the 'src' URL below with the one they provide. -->
+                <!--
+                    IMPORTANT: To get your own Instagram feed widget, go to a free service like Lightwidget.com or Snapwidget.com.
+                    Create a free account, connect your Instagram, and they will give you an iframe code like this one.
+                    Just replace the 'src' URL below with the one they provide.
+                -->
                 <iframe src="//lightwidget.com/widgets/placeholder.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
             </div>
         </div>
     </section>
 
     <!-- Transformations Section -->
-    <section id="transformations" class="py-20 md:py-32 bg-gray-900">
+    <section id="transformations" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Client Transformations</h2>
@@ -283,7 +322,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Transformation 1 -->
-                <div class="bg-gray-800 rounded-lg p-8 fade-in-up">
+                <div class="bg-gray-800 rounded-lg p-8 fade-in-up card-hover-effect">
                     <div class="flex flex-col sm:flex-row gap-6 items-center">
                         <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
                         <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
@@ -294,7 +333,7 @@
                     <p class="text-right mt-4 font-bold text-amber-400">— Sarah J., 6 Months</p>
                 </div>
                 <!-- Transformation 2 -->
-                <div class="bg-gray-800 rounded-lg p-8 fade-in-up">
+                <div class="bg-gray-800 rounded-lg p-8 fade-in-up card-hover-effect">
                     <div class="flex flex-col sm:flex-row gap-6 items-center">
                         <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
                         <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
@@ -309,7 +348,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 md:py-32 bg-black">
+    <section id="faq" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
         <div class="container mx-auto px-6 max-w-3xl">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Frequently Asked Questions</h2>
@@ -317,7 +356,7 @@
             </div>
             <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up">
+                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
                     <button class="faq-question flex justify-between items-center w-full p-6 text-left">
                         <span class="text-xl font-semibold">Where are you located?</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -327,7 +366,7 @@
                     </div>
                 </div>
                 <!-- FAQ Item 2 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up">
+                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
                     <button class="faq-question flex justify-between items-center w-full p-6 text-left">
                         <span class="text-xl font-semibold">What are your rates?</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -337,17 +376,17 @@
                     </div>
                 </div>
                 <!-- FAQ Item 3 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up">
+                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
                     <button class="faq-question flex justify-between items-center w-full p-6 text-left">
                         <span class="text-xl font-semibold">What if I'm a complete beginner?</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="faq-answer px-6 pb-0">
-                        <p class="text-gray-300 mb-6">That's fantastic! Starting is the most important step. I specialize in working with beginners to build a strong foundation safely and effectively. We'll start at your pace and build up from there, ensuring you feel confident and comfortable every step of the way.</p>
+                        <p class="text-gray-300 mb-6">That's fantastic! Starting is the most important step. I specialise in working with beginners to build a strong foundation safely and effectively. We'll start at your pace and build up from there, ensuring you feel confident and comfortable every step of the way.</p>
                     </div>
                 </div>
                 <!-- FAQ Item 4 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up">
+                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
                     <button class="faq-question flex justify-between items-center w-full p-6 text-left">
                         <span class="text-xl font-semibold">How long are the training sessions?</span>
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -361,7 +400,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-gray-900">
+    <section id="contact" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Contact Me</h2>
@@ -369,18 +408,22 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="max-w-2xl mx-auto fade-in-up">
+                <!--
+                    IMPORTANT: Replace "https://formspree.io/f/your_unique_form_id" with the actual URL provided by Formspree.io
+                    after you create your form there. This will enable the form to send submissions to your email.
+                -->
                 <form action="https://formspree.io/f/your_unique_form_id" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
                     </div>
                     <div>
                         <label for="email" class="sr-only">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
                     </div>
                     <div>
                         <label for="interest" class="sr-only">I'm interested in</label>
-                        <select id="interest" name="interest" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                        <select id="interest" name="interest" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
                             <option value="" disabled selected>I'm interested in...</option>
                             <option value="1-on-1 Training">1-on-1 Personal Training</option>
                             <option value="Online Coaching">Online Coaching</option>
@@ -390,7 +433,7 @@
                     </div>
                     <div>
                         <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" rows="6" placeholder="Your Message" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+                        <textarea name="message" id="message" rows="6" placeholder="Your Message" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
@@ -403,25 +446,25 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8">
+    <footer class="bg-black py-8 bg-gradient-subtle-alt">
         <div class="container mx-auto px-6 text-center text-gray-500">
             <!-- UPDATED Social Icons -->
             <div class="flex justify-center items-center space-x-6 mb-4">
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/deepakkalraa/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colors">
+                <a href="https://www.instagram.com/deepakkalraa/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colours">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd" d="M12.315 2c-4.01.004-4.48.018-6.055.088C4.635 2.158 3.75 2.502 3.05 3.202c-.7.7-1.044 1.585-1.114 3.215-.07 1.575-.084 2.045-.088 6.055-.004 4.01.018 4.48.088 6.055.07 1.63.414 2.515 1.114 3.215.7.7 1.585 1.044 3.215 1.114 1.575.07 2.045.084 6.055.088 4.01-.004 4.48-.018 6.055-.088 1.63-.07 2.515-.414 3.215-1.114.7-.7 1.044-1.585 1.114-3.215.07-1.575.084-2.045.088-6.055.004-4.01-.018-4.48-.088-6.055-.07-1.63-.414-2.515-1.114-3.215-.7-.7-1.585-1.044-3.215-1.114C16.795 2.018 16.325 2.004 12.315 2zM8.447 12a3.553 3.553 0 107.106 0 3.553 3.553 0 00-7.106 0zM17.25 7.5a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" clip-rule="evenodd" />
                         <path d="M12 9.25a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
                     </svg>
                 </a>
                 <!-- Email -->
-                <a href="mailto:deepakkalra19@gmail.com" class="text-gray-400 hover:text-amber-400 transition-colors">
+                <a href="mailto:deepakkalra19@gmail.com" class="text-gray-400 hover:text-amber-400 transition-colours">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                 </a>
                 <!-- Phone -->
-                <a href="tel:+6421512121" class="text-gray-400 hover:text-amber-400 transition-colors">
+                <a href="tel:+6421512121" class="text-gray-400 hover:text-amber-400 transition-colours">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
@@ -479,6 +522,9 @@
                 }
             });
         });
+
+        // Removed: Image Carousel Script
+        // The carousel JavaScript has been removed as per your request.
     </script>
 </body>
 </html>
