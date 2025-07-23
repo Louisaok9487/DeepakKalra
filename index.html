@@ -77,10 +77,11 @@
                     <a href="#home" class="hover:text-amber-400 transition-colors">Deepak Kalra</a>
                 </div>
                 <!-- UPDATED Navigation -->
-                <nav class="hidden md:flex items-center space-x-8">
+                <nav class="hidden md:flex items-center space-x-6">
                     <a href="#about" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">About</a>
                     <a href="#services" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Services</a>
                     <a href="#gallery" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Gallery</a>
+                    <a href="#instagram" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Instagram</a>
                     <a href="#transformations" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Results</a>
                     <a href="#faq" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">FAQ</a>
                     <a href="#contact" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Contact</a>
@@ -97,6 +98,7 @@
             <a href="#about" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">About</a>
             <a href="#services" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Services</a>
             <a href="#gallery" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Gallery</a>
+            <a href="#instagram" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Instagram</a>
             <a href="#transformations" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Results</a>
             <a href="#faq" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">FAQ</a>
             <a href="#contact" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Contact</a>
@@ -113,7 +115,6 @@
             <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
                 Unleash your potential. Personalized training programs designed for power, performance, and peak physical condition.
             </p>
-            <!-- UPDATED Button Size -->
             <a href="#contact" class="mt-8 inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
                 Start Your Transformation
             </a>
@@ -153,7 +154,6 @@
                             <div class="mt-2 text-gray-400">Certifications</div>
                         </div>
                     </div>
-                    <!-- UPDATED Button Size -->
                     <div class="mt-10 text-center">
                          <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
                             Book a Free Consultation
@@ -173,20 +173,60 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">1-on-1 Personal Training</h3>
                     <p class="text-gray-300">Experience a fully personalized training program designed to maximize your results. We'll work together in person to perfect your form, push your limits, and ensure every workout is effective and motivating.</p>
                 </div>
-                <!-- Service 2 -->
                 <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left" style="transition-delay: 0.2s;">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">Online Coaching</h3>
                     <p class="text-gray-300">Get expert guidance and accountability from anywhere in the world. My online coaching includes custom workout plans, video feedback on your lifts, and weekly check-ins to keep you on track.</p>
                 </div>
-                <!-- Service 3 -->
                 <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left" style="transition-delay: 0.4s;">
                     <h3 class="text-2xl font-bold text-amber-400 mb-4">Nutritional Guidance</h3>
                     <p class="text-gray-300">Fuel your body for optimal performance and recovery. I'll help you build sustainable, healthy eating habits that complement your training and accelerate your progress—no restrictive diets, just smart choices.</p>
+                </div>
+            </div>
+            <!-- NEW Pricing Table -->
+            <div class="mt-24">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Pricing Packages</h2>
+                    <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Pricing Tier 1 -->
+                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up">
+                        <h3 class="text-2xl font-bold text-center mb-2">Starter Pack</h3>
+                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$XXX</p>
+                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Personal Training Sessions</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colors">Get Started</a>
+                    </div>
+                    <!-- Pricing Tier 2 (Highlighted) -->
+                    <div class="bg-gray-800 p-8 rounded-lg border-2 border-amber-400 flex flex-col fade-in-up relative" style="transition-delay: 0.2s;">
+                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-amber-400 text-black font-bold uppercase text-sm px-4 py-1 rounded-full">Most Popular</div>
+                        <h3 class="text-2xl font-bold text-center mb-2">Transformation Pack</h3>
+                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$YYY</p>
+                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>12 Personal Training Sessions</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalized Nutrition Plan</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-amber-500 transition-colors">Get Started</a>
+                    </div>
+                    <!-- Pricing Tier 3 -->
+                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up" style="transition-delay: 0.4s;">
+                        <h3 class="text-2xl font-bold text-center mb-2">All-In Pack</h3>
+                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$ZZZ</p>
+                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 Personal Training Sessions</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalized Nutrition Plan</li>
+                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Weekly Check-in Calls</li>
+                        </ul>
+                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colors">Get Started</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,7 +248,6 @@
                 <div class="fade-in-up"><img src="images/gallery-5.jpg.png" alt="Gallery image 5" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
                 <div class="fade-in-up"><img src="images/gallery-6.jpg.png" alt="Gallery image 6" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
             </div>
-             <!-- UPDATED Button Size -->
             <div class="mt-16 text-center">
                  <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
                     Want Results Like These? Let's Talk!
@@ -217,8 +256,25 @@
         </div>
     </section>
 
-    <!-- NEW Transformations Section -->
-    <section id="transformations" class="py-20 md:py-32 bg-black">
+    <!-- NEW Instagram Feed Section -->
+    <section id="instagram" class="py-20 md:py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Follow My Journey</h2>
+                <p class="text-lg text-gray-400 mt-2">Latest updates and motivation on Instagram</p>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+            </div>
+            <div class="fade-in-up">
+                <!-- IMPORTANT: To get your own Instagram feed widget, go to a free service like Lightwidget.com or Snapwidget.com -->
+                <!-- Create a free account, connect your Instagram, and they will give you an iframe code like this one. -->
+                <!-- Just replace the 'src' URL below with the one they provide. -->
+                <iframe src="//lightwidget.com/widgets/placeholder.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transformations Section -->
+    <section id="transformations" class="py-20 md:py-32 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Client Transformations</h2>
@@ -227,7 +283,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Transformation 1 -->
-                <div class="bg-gray-900 rounded-lg p-8 fade-in-up">
+                <div class="bg-gray-800 rounded-lg p-8 fade-in-up">
                     <div class="flex flex-col sm:flex-row gap-6 items-center">
                         <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
                         <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
@@ -238,7 +294,7 @@
                     <p class="text-right mt-4 font-bold text-amber-400">— Sarah J., 6 Months</p>
                 </div>
                 <!-- Transformation 2 -->
-                <div class="bg-gray-900 rounded-lg p-8 fade-in-up">
+                <div class="bg-gray-800 rounded-lg p-8 fade-in-up">
                     <div class="flex flex-col sm:flex-row gap-6 items-center">
                         <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
                         <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
@@ -252,8 +308,8 @@
         </div>
     </section>
 
-    <!-- NEW FAQ Section -->
-    <section id="faq" class="py-20 md:py-32 bg-gray-900">
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 bg-black">
         <div class="container mx-auto px-6 max-w-3xl">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Frequently Asked Questions</h2>
@@ -305,7 +361,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-black">
+    <section id="contact" class="py-20 md:py-32 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Contact Me</h2>
@@ -313,7 +369,6 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="max-w-2xl mx-auto fade-in-up">
-                <!-- UPDATED Contact Form -->
                 <form action="https://formspree.io/f/your_unique_form_id" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
@@ -323,7 +378,6 @@
                         <label for="email" class="sr-only">Email</label>
                         <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
                     </div>
-                    <!-- NEW Dropdown -->
                     <div>
                         <label for="interest" class="sr-only">I'm interested in</label>
                         <select id="interest" name="interest" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
@@ -338,7 +392,6 @@
                         <label for="message" class="sr-only">Message</label>
                         <textarea name="message" id="message" rows="6" placeholder="Your Message" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400"></textarea>
                     </div>
-                    <!-- UPDATED Button Size -->
                     <div class="text-center">
                         <button type="submit" class="bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
                             Send Message
@@ -350,9 +403,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
+    <footer class="bg-black py-8">
         <div class="container mx-auto px-6 text-center text-gray-500">
-            <!-- NEW Social Icon -->
             <div class="flex justify-center mb-4">
                 <a href="https://www.instagram.com/deepakkalraa/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colors">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
