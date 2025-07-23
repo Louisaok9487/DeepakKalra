@@ -23,7 +23,7 @@
         .nav-link {
             transition: color 0.3s ease, border-color 0.3s ease;
         }
-        /* Hero section background image - UPDATED */
+        /* Hero section background image */
         .hero-bg {
             background-image: url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?q=80&w=1887&auto=format&fit=crop');
             background-size: cover;
@@ -56,6 +56,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+        /* FAQ Accordion styles */
+        .faq-question svg {
+            transition: transform 0.3s ease;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        }
     </style>
 </head>
 <body class="bg-black text-white font-inter">
@@ -67,9 +76,13 @@
                 <div class="text-2xl font-bold uppercase tracking-wider font-anton">
                     <a href="#home" class="hover:text-amber-400 transition-colors">Deepak Kalra</a>
                 </div>
+                <!-- UPDATED Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#about" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">About</a>
+                    <a href="#services" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Services</a>
                     <a href="#gallery" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Gallery</a>
+                    <a href="#transformations" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Results</a>
+                    <a href="#faq" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">FAQ</a>
                     <a href="#contact" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Contact</a>
                 </nav>
                 <div class="md:hidden">
@@ -82,7 +95,10 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="#about" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">About</a>
+            <a href="#services" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Services</a>
             <a href="#gallery" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Gallery</a>
+            <a href="#transformations" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Results</a>
+            <a href="#faq" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">FAQ</a>
             <a href="#contact" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Contact</a>
         </div>
     </header>
@@ -112,7 +128,6 @@
             </div>
             <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
                 <div class="md:w-1/2 fade-in-up">
-                    <!-- UPDATED: Image path now matches your file name -->
                     <img src="images/deepak-profile.jpg.png" alt="Deepak Kalra training" class="rounded-lg shadow-2xl w-full h-auto object-cover">
                 </div>
                 <div class="md:w-1/2 fade-in-up">
@@ -123,7 +138,6 @@
                     <p class="text-lg text-gray-300">
                         I specialize in creating bespoke training programs that focus on functional strength, hypertrophy, and sustainable results. Whether you're a beginner taking your first step or an experienced lifter aiming to break through a plateau, I provide the guidance, motivation, and expertise to help you conquer your goals. Let's build a stronger you, together.
                     </p>
-                    <!-- Statistics Section -->
                     <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                         <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center">
                             <div class="text-4xl font-bold text-amber-400">10+</div>
@@ -138,20 +152,53 @@
                             <div class="mt-2 text-gray-400">Certifications</div>
                         </div>
                     </div>
+                    <!-- NEW CTA Button -->
+                    <div class="mt-10 text-center">
+                         <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-10 py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
+                            Book a Free Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Services Section -->
+    <section id="services" class="py-20 md:py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">My Programs</h2>
+                <p class="text-lg text-gray-400 mt-2">Tailored plans to meet your unique goals.</p>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4">1-on-1 Personal Training</h3>
+                    <p class="text-gray-300">Experience a fully personalized training program designed to maximize your results. We'll work together in person to perfect your form, push your limits, and ensure every workout is effective and motivating.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4">Online Coaching</h3>
+                    <p class="text-gray-300">Get expert guidance and accountability from anywhere in the world. My online coaching includes custom workout plans, video feedback on your lifts, and weekly check-ins to keep you on track.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-gray-900 p-8 rounded-lg fade-in-up" style="transition-delay: 0.4s;">
+                    <h3 class="text-2xl font-bold text-amber-400 mb-4">Nutritional Guidance</h3>
+                    <p class="text-gray-300">Fuel your body for optimal performance and recovery. I'll help you build sustainable, healthy eating habits that complement your training and accelerate your progress—no restrictive diets, just smart choices.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-20 md:py-32 bg-black">
+    <section id="gallery" class="py-20 md:py-32 bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Gallery</h2>
                 <p class="text-lg text-gray-400 mt-2">A Showcase of Strength and Dedication</p>
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
-            <!-- UPDATED: Gallery image paths now match your file names -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <div class="fade-in-up"><img src="images/gallery-1.jpg.png" alt="Gallery image 1" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
                 <div class="fade-in-up"><img src="images/gallery-2.jpg.png" alt="Gallery image 2" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
@@ -160,11 +207,104 @@
                 <div class="fade-in-up"><img src="images/gallery-5.jpg.png" alt="Gallery image 5" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
                 <div class="fade-in-up"><img src="images/gallery-6.jpg.png" alt="Gallery image 6" class="rounded-lg shadow-lg object-cover w-full h-80 hover:scale-105 transition-transform duration-300"></div>
             </div>
+             <!-- NEW CTA Button -->
+            <div class="mt-16 text-center">
+                 <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-10 py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
+                    Want Results Like These? Let's Talk!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW Transformations Section -->
+    <section id="transformations" class="py-20 md:py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Client Transformations</h2>
+                <p class="text-lg text-gray-400 mt-2">Real people, real results.</p>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Transformation 1 -->
+                <div class="bg-gray-900 rounded-lg p-8 fade-in-up">
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
+                        <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
+                    </div>
+                    <blockquote class="text-gray-300 italic mt-6 border-l-4 border-amber-400 pl-4">
+                        "Working with Deepak changed everything. I'm stronger and more confident than I've ever been. His guidance was the key."
+                    </blockquote>
+                    <p class="text-right mt-4 font-bold text-amber-400">— Sarah J., 6 Months</p>
+                </div>
+                <!-- Transformation 2 -->
+                <div class="bg-gray-900 rounded-lg p-8 fade-in-up">
+                    <div class="flex flex-col sm:flex-row gap-6 items-center">
+                        <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
+                        <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
+                    </div>
+                    <blockquote class="text-gray-300 italic mt-6 border-l-4 border-amber-400 pl-4">
+                        "I finally broke through my plateau and hit new personal records. Deepak's knowledge of programming is second to none."
+                    </blockquote>
+                    <p class="text-right mt-4 font-bold text-amber-400">— Mike R., 1 Year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FAQ Section -->
+    <section id="faq" class="py-20 md:py-32 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Frequently Asked Questions</h2>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
+            </div>
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-800 rounded-lg fade-in-up">
+                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                        <span class="text-xl font-semibold">Where are you located?</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-0">
+                        <p class="text-gray-300 mb-6">I conduct all my in-person training sessions at CityFitness. For online clients, we can work together from anywhere in the world!</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-800 rounded-lg fade-in-up">
+                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                        <span class="text-xl font-semibold">What are your rates?</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-0">
+                        <p class="text-gray-300 mb-6">My rates vary depending on the program and commitment level. I offer several packages to fit different budgets and goals. The best way to get accurate pricing is to book a free consultation so we can discuss your specific needs.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-gray-800 rounded-lg fade-in-up">
+                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                        <span class="text-xl font-semibold">What if I'm a complete beginner?</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-0">
+                        <p class="text-gray-300 mb-6">That's fantastic! Starting is the most important step. I specialize in working with beginners to build a strong foundation safely and effectively. We'll start at your pace and build up from there, ensuring you feel confident and comfortable every step of the way.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-gray-800 rounded-lg fade-in-up">
+                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
+                        <span class="text-xl font-semibold">How long are the training sessions?</span>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-0">
+                        <p class="text-gray-300 mb-6">Typical 1-on-1 training sessions are 60 minutes long. This gives us enough time for a proper warm-up, the main workout, and a cool-down with stretching.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-gray-900">
+    <section id="contact" class="py-20 md:py-32 bg-black">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Contact Me</h2>
@@ -172,7 +312,7 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
             </div>
             <div class="max-w-2xl mx-auto fade-in-up">
-                <!-- Contact Form: Replace the action URL with your own from Formspree.io -->
+                <!-- UPDATED Contact Form -->
                 <form action="https://formspree.io/f/your_unique_form_id" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="sr-only">Name</label>
@@ -181,6 +321,17 @@
                     <div>
                         <label for="email" class="sr-only">Email</label>
                         <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                    </div>
+                    <!-- NEW Dropdown -->
+                    <div>
+                        <label for="interest" class="sr-only">I'm interested in</label>
+                        <select id="interest" name="interest" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                            <option value="" disabled selected>I'm interested in...</option>
+                            <option value="1-on-1 Training">1-on-1 Personal Training</option>
+                            <option value="Online Coaching">Online Coaching</option>
+                            <option value="Nutritional Guidance">Nutritional Guidance</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                        </select>
                     </div>
                     <div>
                         <label for="message" class="sr-only">Message</label>
@@ -197,8 +348,17 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8">
+    <footer class="bg-gray-900 py-8">
         <div class="container mx-auto px-6 text-center text-gray-500">
+            <!-- NEW Social Icon -->
+            <div class="flex justify-center mb-4">
+                <a href="https://www.instagram.com/deepakkalraa/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colors">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c-4.01.004-4.48.018-6.055.088C4.635 2.158 3.75 2.502 3.05 3.202c-.7.7-1.044 1.585-1.114 3.215-.07 1.575-.084 2.045-.088 6.055-.004 4.01.018 4.48.088 6.055.07 1.63.414 2.515 1.114 3.215.7.7 1.585 1.044 3.215 1.114 1.575.07 2.045.084 6.055.088 4.01-.004 4.48-.018 6.055-.088 1.63-.07 2.515-.414 3.215-1.114.7-.7 1.044-1.585 1.114-3.215.07-1.575.084-2.045.088-6.055.004-4.01-.018-4.48-.088-6.055-.07-1.63-.414-2.515-1.114-3.215-.7-.7-1.585-1.044-3.215-1.114C16.795 2.018 16.325 2.004 12.315 2zM8.447 12a3.553 3.553 0 107.106 0 3.553 3.553 0 00-7.106 0zM17.25 7.5a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" clip-rule="evenodd" />
+                        <path d="M12 9.25a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
+                    </svg>
+                </a>
+            </div>
             <p>&copy; 2025 Deepak Kalra. All Rights Reserved.</p>
             <p class="text-sm mt-2">Website Template by Gemini</p>
         </div>
@@ -228,11 +388,29 @@
                 }
             });
         }, {
-            threshold: 0.1 // Trigger when 10% of the element is visible
+            threshold: 0.1
         });
-
         const elementsToAnimate = document.querySelectorAll('.fade-in-up');
         elementsToAnimate.forEach(el => observer.observe(el));
+
+        // FAQ Accordion script
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const svg = question.querySelector('svg');
+
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    answer.style.paddingBottom = '0px';
+                    svg.style.transform = 'rotate(0deg)';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    answer.style.paddingBottom = '1.5rem'; // Corresponds to pb-6
+                    svg.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
     </script>
 </body>
 </html>
