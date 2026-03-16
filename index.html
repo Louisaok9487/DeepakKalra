@@ -7,526 +7,258 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Custom font for headings */
-        .font-anton {
-            font-family: 'Anton', sans-serif;
-        }
-        /* Custom font for body */
-        .font-inter {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Smooth scrolling behaviour */
-        html {
-            scroll-behaviour: smooth;
-        }
-        /* Simple transition for nav links */
-        .nav-link {
-            transition: colour 0.3s ease, border-colour 0.3s ease;
-        }
-        /* Hero section background image */
+        .font-anton { font-family: 'Anton', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
         .hero-bg {
-            /* Updated to local image path */
-            background-image: url('images/hero-background.jpg');
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-background.jpg');
             background-size: cover;
-            /* Ensured the background image is horizontally centred and focuses on the top part */
-            background-position: 50% top;
+            background-position: center;
             background-attachment: fixed;
         }
-        /* Add a subtle overlay to the hero image for better text readability */
-        .hero-overlay::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-colour: rgba(0, 0, 0, 0.6);
-            z-index: 1;
-        }
-        /* Ensure content is above the overlay */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-        /* Animation for elements on scroll */
+
         .fade-in-up {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
         .fade-in-up.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        /* FAQ Accordion styles */
-        .faq-question svg {
-            transition: transform 0.3s ease;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-        }
 
-        /* Removed: Carousel specific styles */
-        /* Removed: Call to Action Button Animations */
-        /* NEW: Enhanced Hover Effects for Cards */
-        .card-hover-effect {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .card-hover {
+            transition: all 0.3s ease;
         }
-        .card-hover-effect:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(245, 158, 11, 0.2); /* Amber glow */
-        }
-
-        /* NEW: Enhanced Hover Effects for Gallery Images */
-        .gallery-image-hover-effect {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery-image-hover-effect:hover {
-            transform: scale(1.07) rotate(1deg); /* Slightly more pronounced scale and subtle rotation */
-            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3); /* Amber glow */
-        }
-
-        /* NEW: Input Field Animations */
-        .form-input-animated {
-            transition: border-colour 0.3s ease, box-shadow 0.3s ease;
-        }
-        .form-input-animated:focus {
-            border-colour: #fbbf24; /* Amber-400 */
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5); /* Amber glow */
-        }
-
-        /* NEW: Subtle Background Gradients */
-        .bg-gradient-subtle {
-            background-image: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(0, 0, 0, 0.9)); /* Darker grey to black */
-        }
-        .bg-gradient-subtle-alt {
-            background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(17, 24, 39, 0.9)); /* Black to darker grey */
+        .card-hover:hover {
+            transform: translateY(-10px);
+            border-color: #fbbf24;
+            box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.1), 0 10px 10px -5px rgba(251, 191, 36, 0.04);
         }
     </style>
 </head>
 <body class="bg-black text-white font-inter">
 
-    <!-- Header & Navigation -->
-    <header id="header" class="bg-black bg-opacity-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold uppercase tracking-wider font-anton">
-                    <a href="#home" class="hover:text-amber-400 transition-colours">Deepak Kalra</a>
-                </div>
-                <!-- UPDATED Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="#about" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">About</a>
-                    <a href="#services" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Services</a>
-                    <a href="#gallery" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Gallery</a>
-                    <a href="#instagram" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Instagram</a>
-                    <a href="#transformations" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Results</a>
-                    <a href="#faq" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">FAQ</a>
-                    <a href="#contact" class="nav-link text-lg font-semibold border-b-2 border-transparent hover:text-amber-400 hover:border-amber-400 pb-1">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">About</a>
-            <a href="#services" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Services</a>
-            <a href="#gallery" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Gallery</a>
-            <a href="#instagram" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Instagram</a>
-            <a href="#transformations" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Results</a>
-            <a href="#faq" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">FAQ</a>
-            <a href="#contact" class="block text-center text-lg py-3 px-6 hover:bg-gray-900">Contact</a>
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-anton tracking-tighter hover:text-amber-400 transition-colors">DEEPAK KALRA</a>
+            <nav class="hidden md:flex space-x-8 font-semibold uppercase text-sm tracking-widest">
+                <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                <a href="#services" class="hover:text-amber-400 transition-colors">Pricing</a>
+                <a href="#transformations" class="hover:text-amber-400 transition-colors">Results</a>
+                <a href="#contact" class="px-4 py-2 bg-amber-400 text-black rounded hover:bg-white transition-colors">Join Now</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-amber-400">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </div>
     </header>
 
-    <!-- Home Section - Restored to static image -->
-    <section id="home" class="hero-bg min-h-screen flex items-center justify-center text-center relative">
-        <div class="hero-overlay"></div>
-        <div class="hero-content container mx-auto px-6">
-            <h1 class="text-6xl md:text-8xl lg:text-9xl font-extrabold uppercase font-anton tracking-wider text-white">
-                Forge Your Strength
-            </h1>
-            <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
-                Unleash your potential. Personalised training programs designed for power, performance, and peak physical condition.
-            </p>
-            <a href="#contact" class="mt-8 inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
-                Start Your Transformation
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-9xl font-anton uppercase leading-none mb-6 fade-in-up">FORGE YOUR<br><span class="text-amber-400">STRENGTH</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 fade-in-up">18+ Years of Elite Coaching Expertise. Real transformations for high-performers.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center fade-in-up">
+                <a href="#contact" class="px-10 py-4 bg-amber-400 text-black font-bold uppercase rounded hover:bg-white transition-all transform hover:scale-105">Start Transformation</a>
+                <a href="#services" class="px-10 py-4 border-2 border-white font-bold uppercase rounded hover:bg-amber-400 hover:border-amber-400 hover:text-black transition-all">View Packages</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="services" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-anton uppercase mb-4">Pricing Packages</h2>
+                <p class="text-gray-400 max-w-xl mx-auto">Flexible training options designed to fit your lifestyle and goals.</p>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 1-on-1 Personal Training -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5 card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">1-on-1 Training</h3>
+                    <div class="text-4xl font-anton text-amber-400 mb-6">$110 <span class="text-sm font-inter text-gray-400">/ Session</span></div>
+                    <ul class="space-y-4 text-gray-400 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 60-Minute Intensive Session</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Form Correction & Technique</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> High-Energy Motivation</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 bg-zinc-800 rounded-lg font-bold hover:bg-amber-400 hover:text-black transition-colors text-center">Enquire Now</a>
+                </div>
+
+                <!-- Elite Online Coaching (Highlighted) -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border-2 border-amber-400 card-hover flex flex-col relative scale-105 z-10">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-tighter">Recommended</div>
+                    <h3 class="text-2xl font-bold mb-2">Elite Online</h3>
+                    <div class="text-4xl font-anton text-amber-400 mb-2">$600 <span class="text-sm font-inter text-gray-400">Setup Fee</span></div>
+                    <div class="text-xl font-bold mb-6 text-white">$70 <span class="text-sm font-normal text-gray-400">/ week after</span></div>
+                    <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
+                        <li class="flex items-center font-semibold text-amber-400"><svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 16-Week Custom Blueprint</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Personalized Nutrition Plans</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Weekly Video Form Analysis</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 24/7 Messaging Access</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-4 bg-amber-400 text-black rounded-lg font-bold uppercase hover:bg-white transition-colors text-center">Get Started</a>
+                </div>
+
+                <!-- 1-on-1 Transformation -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5 card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2">Total Transformation</h3>
+                    <div class="text-2xl font-anton text-gray-300 mb-6 uppercase">Custom Pricing</div>
+                    <ul class="space-y-4 text-gray-400 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 16-Week Full In-Person Coaching</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Comprehensive Body Metrics</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Premium Nutrition Strategy</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 bg-zinc-800 rounded-lg font-bold hover:bg-amber-400 hover:text-black transition-colors text-center">Consultation</a>
+                </div>
+            </div>
+
+            <!-- Single Clinic Add-on -->
+            <div class="mt-12 max-w-2xl mx-auto bg-amber-400/10 border border-amber-400/30 p-6 rounded-xl flex items-center justify-between flex-wrap gap-4">
+                <div>
+                    <h4 class="font-bold text-amber-400 text-lg">Assessment & Form Clinic</h4>
+                    <p class="text-sm text-gray-400">Deep-dive session to test baselines and refine mechanics.</p>
+                </div>
+                <div class="text-2xl font-anton">$140</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Transformations -->
+    <section id="transformations" class="py-24 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-anton uppercase mb-4">Client Results</h2>
+                <div class="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Result 1 -->
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden fade-in-up">
+                    <img src="images/gallery-7.jpg.png" alt="Transformation Result" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="p-8">
+                        <blockquote class="text-lg italic text-gray-300 mb-4 border-l-4 border-amber-400 pl-4">
+                            "Deepak's programming is second to none. I finally broke through my plateaus and built a physique I'm proud of."
+                        </blockquote>
+                        <p class="text-amber-400 font-bold tracking-widest">— 16 WEEK TRANSFORMATION</p>
+                    </div>
+                </div>
+                <!-- Result 2 -->
+                <div class="bg-zinc-900 rounded-3xl overflow-hidden fade-in-up">
+                    <img src="images/gallery-8.jpg.png" alt="Transformation Result" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="p-8">
+                        <blockquote class="text-lg italic text-gray-300 mb-4 border-l-4 border-amber-400 pl-4">
+                            "The accountability and nutritional guidance changed my entire lifestyle. Worth every cent."
+                        </blockquote>
+                        <p class="text-amber-400 font-bold tracking-widest">— LIFESTYLE OVERHAUL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="py-24 bg-zinc-950">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-anton mb-8">FOLLOW THE JOURNEY</h2>
+            <p class="text-gray-400 mb-12">Daily motivation, client wins, and professional lifting tips.</p>
+            
+            <a href="https://www.instagram.com/deepakkalraa/" target="_blank" class="inline-flex items-center gap-4 text-3xl md:text-5xl font-anton text-white hover:text-amber-400 transition-colors">
+                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @DEEPAKKALRAA
             </a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
+    <!-- Contact Section with Netlify Integration -->
+    <section id="contact" class="py-24 bg-black">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">About Me</h2>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-                <div class="md:w-1/2 fade-in-up">
-                    <img src="images/deepak-profile.jpg.png" alt="Deepak Kalra training" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+            <div class="max-w-4xl mx-auto bg-zinc-900 rounded-3xl p-8 md:p-16 border border-white/5">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-anton uppercase mb-4">Start Your Journey</h2>
+                    <p class="text-gray-400 italic">Serious enquiries only. Let's make it happen.</p>
                 </div>
-                <div class="md:w-1/2 fade-in-up">
-                    <h3 class="text-3xl font-bold text-amber-400 mb-4">Deepak Kalra</h3>
-                    <p class="text-lg text-gray-300 mb-6">
-                        As a dedicated personal trainer at CityFitness, my mission is to empower you to become the strongest version of yourself. My journey in fitness began with a simple belief: everyone holds the potential for greatness. It's not just about lifting weights; it's about building discipline, resilience, and a champion's mindset that extends beyond the gym.
-                    </p>
-                    <p class="text-lg text-gray-300">
-                        I specialise in creating bespoke training programs that focus on functional strength, hypertrophy, and sustainable results. Whether you're a beginner taking your first step or an experienced lifter aiming to break through a plateau, I provide the guidance, motivation, and expertise to help you conquer your goals. Let's build a stronger you, together.
-                    </p>
-                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
-                            <div class="text-4xl font-bold text-amber-400">10+</div>
-                            <div class="mt-2 text-gray-400">Years Experience</div>
+
+                <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+                    <!-- Hidden field for Netlify -->
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Full Name</label>
+                            <input type="text" name="name" required class="w-full bg-black border border-white/10 rounded-lg p-4 focus:border-amber-400 outline-none transition-colors">
                         </div>
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
-                            <div class="text-4xl font-bold text-amber-400">500+</div>
-                            <div class="mt-2 text-gray-400">Client Transformations</div>
-                        </div>
-                        <div class="bg-gray-800 p-6 rounded-lg flex flex-col items-center justify-center card-hover-effect">
-                            <div class="text-4xl font-bold text-amber-400">5</div>
-                            <div class="mt-2 text-gray-400">Certifications</div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-black border border-white/10 rounded-lg p-4 focus:border-amber-400 outline-none transition-colors">
                         </div>
                     </div>
-                    <div class="mt-10 text-center">
-                         <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
-                            Book a Free Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">My Programs</h2>
-                <p class="text-lg text-gray-400 mt-2">Tailored plans to meet your unique goals.</p>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect">
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">1-on-1 Personal Training</h3>
-                    <p class="text-gray-300">Experience a fully personalised training program designed to maximise your results. We'll work together in person to perfect your form, push your limits, and ensure every workout is effective and motivating.</p>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect" style="transition-delay: 0.2s;">
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">Online Coaching</h3>
-                    <p class="text-gray-300">Get expert guidance and accountability from anywhere in the world. My online coaching includes custom workout plans, video feedback on your lifts, and weekly check-ins to keep you on track.</p>
-                </div>
-                <div class="bg-gray-900 p-8 rounded-lg fade-in-up text-left card-hover-effect" style="transition-delay: 0.4s;">
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">Nutritional Guidance</h3>
-                    <p class="text-300">Fuel your body for optimal performance and recovery. I'll help you build sustainable, healthy eating habits that complement your training and accelerate your progress—no restrictive diets, just smart choices.</p>
-                </div>
-            </div>
-            <!-- NEW Pricing Table -->
-            <div class="mt-24">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Pricing Packages</h2>
-                    <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-                </div>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    <!-- Pricing Tier 1 -->
-                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up card-hover-effect">
-                        <h3 class="text-2xl font-bold text-center mb-2">Starter Pack</h3>
-                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$XXX</p>
-                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5 Personal Training Sessions</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
-                        </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colours">Get Started</a>
-                    </div>
-                    <!-- Pricing Tier 2 (Highlighted) -->
-                    <div class="bg-gray-800 p-8 rounded-lg border-2 border-amber-400 flex flex-col fade-in-up relative card-hover-effect" style="transition-delay: 0.2s;">
-                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-amber-400 text-black font-bold uppercase text-sm px-4 py-1 rounded-full">Most Popular</div>
-                        <h3 class="text-2xl font-bold text-center mb-2">Transformation Pack</h3>
-                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$YYY</p>
-                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>12 Personal Training Sessions</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalised Nutrition Plan</li>
-                        </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-amber-500 transition-colours">Get Started</a>
-                    </div>
-                    <!-- Pricing Tier 3 -->
-                    <div class="bg-gray-900 p-8 rounded-lg border border-gray-700 flex flex-col fade-in-up card-hover-effect" style="transition-delay: 0.4s;">
-                        <h3 class="text-2xl font-bold text-center mb-2">All-In Pack</h3>
-                        <p class="text-5xl font-anton text-center text-amber-400 mb-6">$ZZZ</p>
-                        <ul class="space-y-4 text-gray-300 mb-8 flex-grow">
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>20 Personal Training Sessions</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Initial Fitness Assessment</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personalised Nutrition Plan</li>
-                            <li class="flex items-center"><svg class="w-6 h-6 text-amber-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Weekly Check-in Calls</li>
-                        </ul>
-                        <a href="#contact" class="mt-auto w-full text-center bg-gray-700 text-white font-bold uppercase text-lg px-8 py-3 rounded-md hover:bg-gray-600 transition-colours">Get Started</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Gallery</h2>
-                <p class="text-lg text-gray-400 mt-2">A Showcase of Strength and Dedication</p>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                <div class="fade-in-up"><img src="images/gallery-1.jpg.png" alt="Gallery image 1" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-                <div class="fade-in-up"><img src="images/gallery-2.jpg.png" alt="Gallery image 2" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-                <div class="fade-in-up"><img src="images/gallery-3.jpg.png" alt="Gallery image 3" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-                <div class="fade-in-up"><img src="images/gallery-4.jpg.png" alt="Gallery image 4" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-                <div class="fade-in-up"><img src="images/gallery-5.jpg.png" alt="Gallery image 5" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-                <div class="fade-in-up"><img src="images/gallery-6.jpg.png" alt="Gallery image 6" class="rounded-lg shadow-lg object-cover w-full h-80 gallery-image-hover-effect"></div>
-            </div>
-            <div class="mt-16 text-center">
-                 <a href="#contact" class="inline-block bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
-                    Want Results Like These? Let's Talk!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW Instagram Feed Section -->
-    <section id="instagram" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Follow My Journey</h2>
-                <p class="text-lg text-gray-400 mt-2">Latest updates and motivation on Instagram</p>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="fade-in-up">
-                <!--
-                    IMPORTANT: To get your own Instagram feed widget, go to a free service like Lightwidget.com or Snapwidget.com.
-                    Create a free account, connect your Instagram, and they will give you an iframe code like this one.
-                    Just replace the 'src' URL below with the one they provide.
-                -->
-                <iframe src="//lightwidget.com/widgets/placeholder.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transformations Section -->
-    <section id="transformations" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Client Transformations</h2>
-                <p class="text-lg text-gray-400 mt-2">Real people, real results.</p>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- Transformation 1 -->
-                <div class="bg-gray-800 rounded-lg p-8 fade-in-up card-hover-effect">
-                    <div class="flex flex-col sm:flex-row gap-6 items-center">
-                        <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
-                        <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
-                    </div>
-                    <blockquote class="text-gray-300 italic mt-6 border-l-4 border-amber-400 pl-4">
-                        "Working with Deepak changed everything. I'm stronger and more confident than I've ever been. His guidance was the key."
-                    </blockquote>
-                    <p class="text-right mt-4 font-bold text-amber-400">— Sarah J., 6 Months</p>
-                </div>
-                <!-- Transformation 2 -->
-                <div class="bg-gray-800 rounded-lg p-8 fade-in-up card-hover-effect">
-                    <div class="flex flex-col sm:flex-row gap-6 items-center">
-                        <img src="https://placehold.co/200x200/2d3748/e2e8f0?text=Before" alt="Client before photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
-                        <img src="https://placehold.co/200x200/e5a00d/000000?text=After" alt="Client after photo" class="w-32 h-32 md:w-48 md:h-48 object-cover rounded-lg">
-                    </div>
-                    <blockquote class="text-gray-300 italic mt-6 border-l-4 border-amber-400 pl-4">
-                        "I finally broke through my plateau and hit new personal records. Deepak's knowledge of programming is second to none."
-                    </blockquote>
-                    <p class="text-right mt-4 font-bold text-amber-400">— Mike R., 1 Year</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-20 md:py-32 bg-black bg-gradient-subtle-alt">
-        <div class="container mx-auto px-6 max-w-3xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Frequently Asked Questions</h2>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="space-y-4">
-                <!-- FAQ Item 1 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
-                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
-                        <span class="text-xl font-semibold">Where are you located?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-0">
-                        <p class="text-gray-300 mb-6">I conduct all my in-person training sessions at CityFitness. For online clients, we can work together from anywhere in the world!</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
-                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
-                        <span class="text-xl font-semibold">What are your rates?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-0">
-                        <p class="text-gray-300 mb-6">My rates vary depending on the program and commitment level. I offer several packages to fit different budgets and goals. The best way to get accurate pricing is to book a free consultation so we can discuss your specific needs.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 3 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
-                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
-                        <span class="text-xl font-semibold">What if I'm a complete beginner?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-0">
-                        <p class="text-gray-300 mb-6">That's fantastic! Starting is the most important step. I specialise in working with beginners to build a strong foundation safely and effectively. We'll start at your pace and build up from there, ensuring you feel confident and comfortable every step of the way.</p>
-                    </div>
-                </div>
-                <!-- FAQ Item 4 -->
-                <div class="bg-gray-800 rounded-lg fade-in-up card-hover-effect">
-                    <button class="faq-question flex justify-between items-center w-full p-6 text-left">
-                        <span class="text-xl font-semibold">How long are the training sessions?</span>
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div class="faq-answer px-6 pb-0">
-                        <p class="text-gray-300 mb-6">Typical 1-on-1 training sessions are 60 minutes long. This gives us enough time for a proper warm-up, the main workout, and a cool-down with stretching.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 md:py-32 bg-gray-900 bg-gradient-subtle">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold font-anton uppercase tracking-wider">Contact Me</h2>
-                <p class="text-lg text-gray-400 mt-2">Ready to take the next step? Let's talk.</p>
-                <div class="w-24 h-1 bg-amber-400 mx-auto mt-4"></div>
-            </div>
-            <div class="max-w-2xl mx-auto fade-in-up">
-                <!--
-                    IMPORTANT: Replace "https://formspree.io/f/your_unique_form_id" with the actual URL provided by Formspree.io
-                    after you create your form there. This will enable the form to send submissions to your email.
-                -->
-                <form action="https://formspree.io/f/your_unique_form_id" method="POST" class="space-y-6">
+                    
                     <div>
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
-                    </div>
-                    <div>
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
-                    </div>
-                    <div>
-                        <label for="interest" class="sr-only">I'm interested in</label>
-                        <select id="interest" name="interest" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated">
-                            <option value="" disabled selected>I'm interested in...</option>
-                            <option value="1-on-1 Training">1-on-1 Personal Training</option>
-                            <option value="Online Coaching">Online Coaching</option>
-                            <option value="Nutritional Guidance">Nutritional Guidance</option>
-                            <option value="General Inquiry">General Inquiry</option>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Program Interest</label>
+                        <select name="program" class="w-full bg-black border border-white/10 rounded-lg p-4 focus:border-amber-400 outline-none transition-colors appearance-none">
+                            <option value="Online Coaching">16-Week Elite Online Coaching</option>
+                            <option value="1-on-1 Transformation">1-on-1 Total Transformation</option>
+                            <option value="PT Session">Single PT Sessions</option>
+                            <option value="Assessment">Assessment & Form Clinic</option>
                         </select>
                     </div>
+
                     <div>
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea name="message" id="message" rows="6" placeholder="Your Message" required class="w-full bg-gray-800 border border-gray-700 rounded-md py-3 px-4 text-white focus:outline-none focus:ring-2 focus:ring-amber-400 form-input-animated"></textarea>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Goals</label>
+                        <textarea name="message" rows="4" class="w-full bg-black border border-white/10 rounded-lg p-4 focus:border-amber-400 outline-none transition-colors"></textarea>
                     </div>
-                    <div class="text-center">
-                        <button type="submit" class="bg-amber-400 text-black font-bold uppercase text-lg px-8 py-3 md:px-10 md:py-4 rounded-md hover:bg-amber-500 transition-transform transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </div>
+
+                    <button type="submit" class="w-full py-5 bg-amber-400 text-black font-anton text-2xl uppercase rounded-xl hover:bg-white transition-all transform active:scale-95 shadow-lg shadow-amber-400/20">
+                        Send Application
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 bg-gradient-subtle-alt">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <!-- UPDATED Social Icons -->
-            <div class="flex justify-center items-center space-x-6 mb-4">
-                <!-- Instagram -->
-                <a href="https://www.instagram.com/deepakkalraa/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-amber-400 transition-colours">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M12.315 2c-4.01.004-4.48.018-6.055.088C4.635 2.158 3.75 2.502 3.05 3.202c-.7.7-1.044 1.585-1.114 3.215-.07 1.575-.084 2.045-.088 6.055-.004 4.01.018 4.48.088 6.055.07 1.63.414 2.515 1.114 3.215.7.7 1.585 1.044 3.215 1.114 1.575.07 2.045.084 6.055.088 4.01-.004 4.48-.018 6.055-.088 1.63-.07 2.515-.414 3.215-1.114.7-.7 1.044-1.585 1.114-3.215.07-1.575.084-2.045.088-6.055.004-4.01-.018-4.48-.088-6.055-.07-1.63-.414-2.515-1.114-3.215-.7-.7-1.585-1.044-3.215-1.114C16.795 2.018 16.325 2.004 12.315 2zM8.447 12a3.553 3.553 0 107.106 0 3.553 3.553 0 00-7.106 0zM17.25 7.5a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" clip-rule="evenodd" />
-                        <path d="M12 9.25a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5z" />
-                    </svg>
-                </a>
-                <!-- Email -->
-                <a href="mailto:deepakkalra19@gmail.com" class="text-gray-400 hover:text-amber-400 transition-colours">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                </a>
-                <!-- Phone -->
-                <a href="tel:+6421512121" class="text-gray-400 hover:text-amber-400 transition-colours">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                </a>
+    <footer class="py-12 border-t border-white/5 bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-500 text-sm mb-4 tracking-tighter uppercase font-bold">&copy; 2026 DEEPAK KALRA FITNESS. ALL RIGHTS RESERVED.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.instagram.com/deepakkalraa/" class="text-gray-500 hover:text-amber-400">INSTAGRAM</a>
+                <a href="mailto:deepakkalra19@gmail.com" class="text-gray-500 hover:text-amber-400">EMAIL</a>
             </div>
-            <p>&copy; 2025 Deepak Kalra. All Rights Reserved.</p>
-            <p class="text-sm mt-2">Website Template by Gemini</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
-
-        // Scroll animations
+        // Scroll Animation Observer
+        const observerOptions = { threshold: 0.2 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
-        }, {
-            threshold: 0.1
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menu-btn');
+        menuBtn.addEventListener('click', () => {
+            // Basic toggle for a simple UI
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('p-6');
         });
-        const elementsToAnimate = document.querySelectorAll('.fade-in-up');
-        elementsToAnimate.forEach(el => observer.observe(el));
-
-        // FAQ Accordion script
-        const faqQuestions = document.querySelectorAll('.faq-question');
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const svg = question.querySelector('svg');
-
-                if (answer.style.maxHeight) {
-                    answer.style.maxHeight = null;
-                    answer.style.paddingBottom = '0px';
-                    svg.style.transform = 'rotate(0deg)';
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
-                    answer.style.paddingBottom = '1.5rem'; // Corresponds to pb-6
-                    svg.style.transform = 'rotate(180deg)';
-                }
-            });
-        });
-
-        // Removed: Image Carousel Script
-        // The carousel JavaScript has been removed as per your request.
     </script>
 </body>
 </html>
