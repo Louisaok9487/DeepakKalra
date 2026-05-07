@@ -172,6 +172,7 @@
                 <div class="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
             </div>
 
+            <!-- Row 1 -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- 1-on-1 Personal Training -->
                 <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5 card-hover flex flex-col">
@@ -212,6 +213,38 @@
                     <a href="#contact" class="w-full py-3 bg-zinc-800 rounded-lg font-bold hover:bg-amber-400 hover:text-black transition-colors text-center uppercase text-sm tracking-widest">Consult</a>
                 </div>
             </div>
+
+            <!-- Row 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+
+                <!-- 3x per week -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-white/5 card-hover flex flex-col">
+                    <h3 class="text-2xl font-bold mb-2 uppercase font-anton tracking-tight">3 Sessions / Week</h3>
+                    <div class="text-4xl font-anton text-amber-400 mb-6">$100 <span class="text-sm font-inter text-gray-400">/ Session</span></div>
+                    <ul class="space-y-4 text-gray-400 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 3 x 60-Minute Sessions Weekly</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Consistent Coaching & Accountability</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Progressive Program Design</li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 bg-zinc-800 rounded-lg font-bold hover:bg-amber-400 hover:text-black transition-colors text-center uppercase text-sm tracking-widest">Enquire</a>
+                </div>
+
+                <!-- 8-Week Loyalty Reward -->
+                <div class="bg-zinc-900 p-8 rounded-2xl border border-amber-400/40 card-hover flex flex-col">
+                    <div class="inline-block bg-amber-400/10 text-amber-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 self-start">Loyalty Reward</div>
+                    <h3 class="text-2xl font-bold mb-2 uppercase font-anton tracking-tight">8-Week Commitment</h3>
+                    <div class="text-4xl font-anton text-amber-400 mb-2">$100 <span class="text-sm font-inter text-gray-400">/ Session</span></div>
+                    <div class="text-sm text-amber-400 font-semibold mb-6">+ Free Workout Plan (valued at $220)</div>
+                    <ul class="space-y-4 text-gray-400 mb-8 flex-grow">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> 4 Sessions Per Week for 8 Weeks</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> Full Form Correction & Progress Tracking</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-amber-400 mr-2 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg> <span>Complimentary Personalised Workout Plan upon completion — yours to keep forever</span></li>
+                    </ul>
+                    <a href="#contact" class="w-full py-3 bg-zinc-800 rounded-lg font-bold hover:bg-amber-400 hover:text-black transition-colors text-center uppercase text-sm tracking-widest">Enquire</a>
+                </div>
+
+            </div>
+
         </div>
     </section>
 
@@ -313,13 +346,8 @@
 
     <script>
     (function() {
-        // ─── CONFIG ───────────────────────────────────────────────────
-        // Just drop t1.png, t2.png … into your images/ folder.
-        // The carousel auto-detects however many exist (up to MAX_PHOTOS).
-        // No code changes needed when you add or remove photos.
         const MAX_PHOTOS = 50;
         const IMAGE_FOLDER = 'images/';
-        // ─────────────────────────────────────────────────────────────
 
         const inner = document.getElementById('transformation-inner');
         const dotsContainer = document.getElementById('t-dots');
@@ -329,7 +357,6 @@
         let dots = [];
         let loadedImages = [];
 
-        // Probe all candidate filenames in parallel, collect the ones that load
         function probeImages() {
             const candidates = Array.from({ length: MAX_PHOTOS }, (_, i) => `${IMAGE_FOLDER}t${i + 1}.png`);
             const checks = candidates.map(src => new Promise(resolve => {
@@ -367,7 +394,6 @@
                 dots.push(dot);
             });
 
-            // Hide arrows if only one photo
             if (total === 1) {
                 prevBtn.style.display = 'none';
                 nextBtn.style.display = 'none';
@@ -383,7 +409,6 @@
         prevBtn.addEventListener('click', () => goTo(current - 1));
         nextBtn.addEventListener('click', () => goTo(current + 1));
 
-        // Touch / swipe support
         let startX = 0;
         const track = document.getElementById('transformation-track');
         track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
@@ -392,13 +417,11 @@
             if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
         }, { passive: true });
 
-        // Keyboard navigation
         document.addEventListener('keydown', e => {
             if (e.key === 'ArrowLeft') goTo(current - 1);
             if (e.key === 'ArrowRight') goTo(current + 1);
         });
 
-        // Kick off detection
         probeImages().then(buildCarousel);
     })();
     </script>
@@ -445,6 +468,8 @@
                             <option value="Online Coaching">16-Week Elite Online Coaching</option>
                             <option value="1-on-1 Transformation">1-on-1 Total Transformation</option>
                             <option value="PT Session">Single PT Sessions</option>
+                            <option value="3x Per Week">3 Sessions / Week</option>
+                            <option value="8-Week Commitment">8-Week Commitment Package</option>
                             <option value="Assessment">Assessment & Form Clinic</option>
                         </select>
                     </div>
